@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: url(navi-F6GPoByBDaU-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 10%;
+    /*background: orange;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    color: white;
+}
+.logo span{
+    margin-left:70px;
+}
+.navigation a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1em;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    border-radius: 8px;
+    background: white;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navigation a:hover:after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.login_display{
+    padding: 5px;
+    color: white;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    background: transparent;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.login_display:hover{
+    background: white;
+    color: black;
+}
+.contaier{
+    position: absolute;
+    margin-top: 50px;
+    width: 80%;
+    height: 450px;
+    border: 1.5px solid rgba(255,255,255,.5);
+    background: url(navi-F6GPoByBDaU-unsplash.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+}
+.contaier .content{
+    width: 58%;
+    height: 100%;
+    padding: 40px;
+    background: transparent;
+}
+.content .IncName{
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    font-size: 1.1em;
+}
+.Info h2{
+    margin: 30px 0;
+}
+.socialMedia{
+    position: absolute;
+    top: 80%;
+}
+.socialMedia a{
+    margin-left: 20px;
+    font-size: 1.4em;
+    color: white;
+}
+.contaier .logIn_box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(255,255,255,.1);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.logIn_box .logInForm_box{
+    width: 100%;
+    padding: 40px;
+}
+.logInForm_box h2{
+    text-align: center;
+}
+.logInForm_box .inputBox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    background: transparent;
+    border-bottom: 1px solid white;
+}
+.inputBox .Icon{
+    position: absolute;
+    right: 8px;
+}
+
+.inputBox input{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-right: 35px;
+}
+.inputBox label{
+    position: absolute;
+    top: 60%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.inputBox input:focus~label,
+.inputBox input:valid~label{
+    top: 5px;
+}
